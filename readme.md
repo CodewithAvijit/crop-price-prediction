@@ -8,10 +8,9 @@ This project predicts the modal price of crops using machine learning.
 ## 🧠 Overview
 
 A Linear Regression model is trained on historical crop data to predict prices based on features like commodity, variety, grade, location, and minimum/maximum prices.
-
+```
 ## 📁 Project Structure
-
-```bash
+```
 Crop_Price_Prediction/
 ├── backend/
 │   └── predict.py              # Script for making price predictions
