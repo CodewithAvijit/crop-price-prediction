@@ -1,41 +1,43 @@
+Here’s your **complete fixed `README.md`** with the project structure fully inside a **bash code block**, as requested:
+
 ```markdown
 # Crop Price Prediction
 
 This project predicts the modal price of crops using machine learning.
 
-## Overview
+## 🧠 Overview
 
-The project trains a Linear Regression model on historical crop data to predict prices based on input features like commodity, variety, grade, location, and min/max prices.
+A Linear Regression model is trained on historical crop data to predict prices based on features like commodity, variety, grade, location, and minimum/maximum prices.
 
-## Project Structure
+## 📁 Project Structure
 
-```
+```bash
 Crop_Price_Prediction/
 ├── backend/
-│   └── predict.py         # Script for making price predictions
+│   └── predict.py              # Script for making price predictions
 ├── processdata/
-│   └── CLEAN_CROP.csv     # Cleaned and preprocessed crop data
+│   └── CLEAN_CROP.csv          # Cleaned and preprocessed crop data
 ├── rawdata/
-│   └── CROP.csv           # Raw crop price data (input)
+│   └── CROP.csv                # Raw crop price data
 ├── traindata/
-│   ├── commodityenconder.pkl
-│   ├── districtenconder.pkl
+│   ├── commodityencoder.pkl
+│   ├── districtencoder.pkl
 │   ├── model.pkl
-│   ├── stateenconder.pkl
-│   └── varietyenconder.pkl
-├── README.md              # This file
-└── requirements.txt       # Project dependencies
+│   ├── stateencoder.pkl
+│   └── varietyencoder.pkl
+├── README.md                   # Project documentation
+└── requirements.txt            # Project dependencies
 ```
 
-## Dependencies
+## 📦 Dependencies
 
-Install required libraries:
+Install the required libraries using:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-The `requirements.txt` file should contain:
+Contents of `requirements.txt`:
 
 ```
 pandas
@@ -47,35 +49,38 @@ seaborn
 numpy
 ```
 
-(For specific versions, see the previous response.)
+## ⚙️ Setup and Usage
 
-## Setup and Usage
+1. **Place the raw data file** `CROP.csv` into the `rawdata/` directory.
 
-1.  **Place your raw data file (`CROP.csv`) in the `rawdata` directory.**
-2.  **Run the training script (e.g., `your_training_script_name.py`) to train the model:**
-    ```bash
-    python your_training_script_name.py
-    ```
-    This will generate `CLEAN_CROP.csv` in `processdata` and save the model and encoders in `traindata`.
-3.  **Run the prediction script:**
-    ```bash
-    cd backend
-    python predict.py
-    ```
-    Follow the prompts to enter crop details or generate random inputs for prediction.
+2. **Run the training script** to process the data and train the model:
 
-## Data Sources
+   ```bash
+   python your_training_script_name.py
+   ```
 
-The project uses `CROP.csv` in the `rawdata` directory.
+   This will:
+   - Generate `CLEAN_CROP.csv` in the `processdata/` folder
+   - Save the model and encoders in the `traindata/` folder
 
-## Model
+3. **Run the prediction script**:
 
-A Linear Regression model is used for prediction.
+   ```bash
+   cd backend
+   python predict.py
+   ```
 
-## Evaluation (in training script)
+   Follow the prompts to enter crop details or let it generate random inputs for prediction.
 
-The training script calculates R-squared and Mean Squared Error to evaluate the model.
+## 📊 Model Details
 
-## Author
+- **Algorithm**: Linear Regression  
+- **Evaluation Metrics**: R-squared and Mean Squared Error (computed in training script)
 
-AVIJIT BHADRA
+## 📚 Data Source
+
+- `rawdata/CROP.csv` — primary source of historical crop price data
+
+## 👨‍💻 Author
+
+**Avijit Bhadra**
