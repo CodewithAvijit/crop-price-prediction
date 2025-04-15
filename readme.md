@@ -1,6 +1,4 @@
-Here’s your **complete fixed `README.md`** with the project structure fully inside a **bash code block**, as requested:
-
-```markdown
+```
 # Crop Price Prediction
 
 This project predicts the modal price of crops using machine learning.
